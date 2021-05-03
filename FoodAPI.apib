@@ -1,0 +1,136 @@
+FORMAT:1A
+
+# Dokumentasi Food Spoonacular - Christina
+Hosting yang digunakan dalam ini ialah port 5050
+
+Api ini memberikan informasi tentang :
+- Search : mencari makanan dalam data
+- Ingre : mencari bahan yang ada didalam data
+- Grocery : mencari toko yang ada didalam data
+
+## Food [/food{?makanan}&{query}]
++ Parameters
+    + makanan (optional)
+        + default: none
+    + query (optional)
+        + default: none
+
+### Ambil banyak data [GET]
+
++ Response 200 (application/json)
+    + Body
+        {
+            "results": [
+            {
+                "id": 716426,
+                "title": "Cauliflower, Brown Rice, and Vegetable Fried Rice",
+                "image": "https://spoonacular.com/recipeImages/716426-312x231.jpg",
+                "imageType": "jpg"
+            },
+            {
+                "id": 715594,
+                "title": "Homemade Garlic and Basil French Fries",
+                "image": "https://spoonacular.com/recipeImages/715594-312x231.jpg",
+                "imageType": "jpg"
+            },
+            {
+                "id": 715497,
+                "title": "Berry Banana Breakfast Smoothie",
+                "image": "https://spoonacular.com/recipeImages/715497-312x231.jpg",
+                "imageType": "jpg"
+            },
+        }
+
+## Resep [/search{?makanan}&{query}]
++ Parameters
+    + makanan (optional)
+        + default: none
+    + query (optional)
+        + default: none
+
+### Ambil banyak data [GET]
++ Response 200 (application/json)
+    + Body
+        {
+            "results": [
+            {
+                "id": 656329,
+                "title": "Pizza bites with pumpkin",
+                "image": "https://spoonacular.com/recipeImages/656329-312x231.jpg",
+                "imageType": "jpg"
+            },
+            {
+                "id": 680975,
+                "title": "BLT Pizza",
+                "image": "https://spoonacular.com/recipeImages/680975-312x231.jpg",
+                "imageType": "jpg"
+            },
+            {
+                "id": 663136,
+                "title": "Thai Pizza",
+                "image": "https://spoonacular.com/recipeImages/663136-312x231.jpg",
+                "imageType": "jpg"
+            },
+        }
+
+## Bahan [/ingre{?makanan}&{query}]
++ Parameters
+    + makanan (optional)
+        + default: none
+    + query (optional)
+        + default: none
+
+### Ambil banyak data [GET]
++ Response 200 (application/json)
+    + Body
+        {
+            "results": [
+            {
+                "id": 9003,
+                "name": "apple",
+                "image": "apple.jpg"
+            },
+            {
+                "id": 9019,
+                "name": "applesauce",
+                "image": "applesauce.png"
+            },
+            {
+                "id": 9016,
+                "name": "apple juice",
+                "image": "apple-juice.jpg"
+            },
+        }
+
+## Toko [/grocery{?makanan}&{query}]
++ Parameters
+    + makanan (optional)
+        + default: none
+    + query (optional)
+        + default: none
+
+### Ambil banyak data [GET]
++ Response 200 (application/json)
+    + Body
+        {
+            "type": "product",
+            "products": [
+            {
+                "id": 79812,
+                "title": "Chobani Greek Low-Fat Yogurt Coconut Blended",
+                "image": "https://spoonacular.com/productImages/79812-312x231.jpg",
+                "imageType": "jpg"
+            },
+            {
+                "id": 135746,
+                "title": "Marzetti Dressing",
+                "image": "https://spoonacular.com/productImages/135746-312x231.jpg",
+                "imageType": "jpg"
+            },
+            {
+                "id": 61079,
+                "title": "Rickland Orchards Greek Yogurt Bar Toasted Coconut",
+                "image": "https://spoonacular.com/productImages/61079-312x231.jpg",
+                "imageType": "jpg"
+            },
+        }
